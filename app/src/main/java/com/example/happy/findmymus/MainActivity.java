@@ -5,9 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
-    private Button mapActivityButton;
+    private ImageButton mapActivityButton;
+    private ImageButton musicLibraryButton;
+    private Button profileActivityButton;
 
 
     @Override
@@ -15,25 +18,45 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mapActivityButton = (Button) findViewById(R.id.Profile);
+        mapActivityButton = (ImageButton) findViewById(R.id.FindLocalConcert);
+        musicLibraryButton  = (ImageButton) findViewById(R.id.MusicLibrary);
+        profileActivityButton = (Button) findViewById(R.id.Profile);
+
+        profileActivityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openProfileActivity();
+            }
+        });
 
         mapActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openProfileActivity();
-                // openMapActivity();
+                openMapActivity();
+            }
+        });
+
+        musicLibraryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMusicLibraryActivity();
             }
         });
     }
 
-    public void openMapActivity()
-        {
+    public void openMapActivity() {
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
     }
 
-    public void openProfileActivity(){
+    public void openProfileActivity() {
         Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
     }
+
+    public void openMusicLibraryActivity() {
+        Intent intent = new Intent(this, MusicLIbrary.class);
+        startActivity(intent);
+    }
+
 }
