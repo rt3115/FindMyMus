@@ -14,13 +14,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571"
-        app:srcCompat="@color/colorAccent" />
+        app:layout_constraintVertical_bias="0.548"
+        app:srcCompat="@drawable/find_local_bands_icon" />
 
     <ImageButton
         android:id="@+id/FindLocalConcert"
@@ -49,13 +50,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@color/colorAccent" />
+        app:srcCompat="@drawable/music_library_icon" />
 
     <ImageButton
         android:id="@+id/FindLocalMusicians"
@@ -65,13 +67,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571"
-        app:srcCompat="@color/colorAccent" />
+        app:layout_constraintVertical_bias="0.548"
+        app:srcCompat="@drawable/find_local_musicians_icon" />
 
     <Button
         android:id="@+id/Profile"

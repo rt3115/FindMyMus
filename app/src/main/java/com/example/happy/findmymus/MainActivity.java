@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton musicLibraryButton;
     private Button profileActivityButton;
     private ImageButton findLocalMusicians;
+    private ImageButton findLocalBandsButton;
 
 
     @Override
@@ -23,6 +24,14 @@ public class MainActivity extends AppCompatActivity {
         musicLibraryButton  = (ImageButton) findViewById(R.id.MusicLibrary);
         profileActivityButton = (Button) findViewById(R.id.Profile);
          findLocalMusicians = (ImageButton) findViewById(R.id.FindLocalMusicians);
+         findLocalBandsButton = (ImageButton) findViewById(R.id.FindLocalBands);
+
+         findLocalBandsButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 openFindLocalBandsActivity();
+             }
+         });
 
          findLocalMusicians.setOnClickListener(new View.OnClickListener() {
              @Override
@@ -54,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openMapActivity() {
-        Intent intent = new Intent(this, MapsActivity.class);
+        Intent intent = new Intent(this, FindLocalConActivity.class);
         startActivity(intent);
     }
 
@@ -70,6 +79,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openFindLocalMusiciansActivity(){
         Intent intent = new Intent(this, FindMusician.class);
+        startActivity(intent);
+    }
+
+    public void openFindLocalBandsActivity(){
+        Intent intent = new Intent(this, FindLocalBands.class);
         startActivity(intent);
     }
 

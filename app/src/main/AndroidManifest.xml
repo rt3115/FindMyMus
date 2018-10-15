@@ -35,9 +35,6 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDrclhnmJrh_C3DRoORiEaReeK_adVu2kc" />
 
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".FindMusician" />
         <activity android:name=".DirectMessage" />
@@ -49,7 +46,11 @@
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
         <activity android:name=".FindLocalConActivity" />
-        <activity android:name=".SearchMapActivity"></activity>
+        <activity android:name=".SearchMapActivity" />
+        <activity android:name=".FindLocalBands" />
+        <activity
+            android:name=".MapsActivity2"
+            android:label="@string/title_activity_maps2"></activity>
     </application>
 
 </manifest>
