@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/FindLocalBands"
         android:layout_width="166dp"
         android:layout_height="154dp"
         android:layout_marginBottom="8dp"
@@ -23,7 +23,7 @@
         app:srcCompat="@color/colorAccent" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/FindLocalConcert"
         android:layout_width="166dp"
         android:layout_height="154dp"
         android:layout_marginBottom="16dp"
@@ -39,7 +39,7 @@
         app:srcCompat="@color/colorAccent" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/MusicLibrary"
         android:layout_width="166dp"
         android:layout_height="154dp"
         android:layout_marginBottom="16dp"
@@ -71,7 +71,7 @@
         app:srcCompat="@color/colorAccent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/Profile"
         android:layout_width="52dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -87,7 +87,7 @@
         app:layout_constraintVertical_bias="0.015" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/HamburgerMenu"
         android:layout_width="43dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
