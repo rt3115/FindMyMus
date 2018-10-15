@@ -29,7 +29,7 @@ public class DirectMessage extends AppCompatActivity {
 
     public void openProfileActivity()
     {
-        Intent intent = new Intent ( packageContext: this, ProfileActivity.class);
+        Intent intent = new Intent (  this, ProfileActivity.class);
         startActivity(intent);
     }
 }
