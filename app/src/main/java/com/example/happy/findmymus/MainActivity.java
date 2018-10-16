@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
          findLocalMusicians.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 openFindLocalMusiciansActivity();
+                 //openFindLocalMusiciansActivity();
+                 openDMActivity();
              }
          });
 
@@ -84,6 +85,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openFindLocalBandsActivity(){
         Intent intent = new Intent(this, FindLocalBands.class);
+        startActivity(intent);
+    }
+
+    public void openDMActivity(){
+        Intent intent = new Intent(this, DirectMessage.class);
         startActivity(intent);
     }
 

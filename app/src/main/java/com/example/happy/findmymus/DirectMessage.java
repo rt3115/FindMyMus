@@ -15,7 +15,7 @@ public class DirectMessage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_direct_message);
 
-        button = (Button) findViewById(R.id.Profile);
+        button = (Button) findViewById(R.id.profile);
 
         button.setOnClickListener(new View.OnClickListener()
         {

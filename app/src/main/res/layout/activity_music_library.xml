@@ -31,7 +31,7 @@
                 app:layout_constraintVertical_bias="0.015" />
 
             <Button
-                android:id="@+id/profile2"
+                android:id="@+id/profile"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_marginBottom="8dp"
