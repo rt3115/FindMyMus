@@ -2,6 +2,7 @@
     <string name="app_name">FindMyMus</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_music_library">MusicLIbrary</string>
+    <string name="no_image">No Image</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

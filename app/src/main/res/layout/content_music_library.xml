@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:text="This is also a test"
+        android:text="@string/hide_bottom_view_on_scroll_behavior"
         tools:text="This is a test" />
 
 
