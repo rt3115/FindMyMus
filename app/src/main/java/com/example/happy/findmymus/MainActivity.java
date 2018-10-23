@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     public void openMapActivity() {
         Intent intent = new Intent(this, FindLocalConActivity.class);
         startActivity(intent);
