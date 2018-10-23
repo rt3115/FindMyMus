@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
          findLocalMusicians.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 //openFindLocalMusiciansActivity();
-                 openDMActivity();
+                 openFindLocalMusiciansActivity();
+                 //openDMActivity();
              }
          });
 
