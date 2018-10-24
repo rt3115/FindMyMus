@@ -9,6 +9,7 @@ public class ProfileData {
     private String name;
     private String userName;
 
+    private boolean L = true;
 
     public ProfileData(String Type, String loc, String description, String shortDescription){
         profileType = Type;
@@ -24,6 +25,14 @@ public class ProfileData {
 
     public void setName(String name){
         this.name = name;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public String getUserName(){
+        return this.userName;
     }
 
     public ProfileData(String Type, String loc){

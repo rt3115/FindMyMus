@@ -21,7 +21,12 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        printStarter();
+
+        profileData.setName("Mark", "OhHaiMark");
+
+        printDes();
+        printName();
+        printUsername();
 
         settingsActivityButton = (Button) findViewById(R.id.Settings);
 
@@ -38,7 +43,15 @@ public class ProfileActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void printStarter() {
+    public void printDes() {
         ((TextView)findViewById(R.id.des)).setText(profileData.getDescription());
+    }
+
+    public void printName(){
+        ((TextView)findViewById(R.id.name)).setText("Name" + profileData.getName());
+    }
+
+    public void printUsername(){
+        ((TextView)findViewById(R.id.username)).setText("USer Name: " + profileData.getUserName());
     }
 }
