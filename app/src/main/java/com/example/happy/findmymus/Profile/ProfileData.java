@@ -18,6 +18,12 @@ public class ProfileData {
         this.shortDescription = shortDescription;
     }
 
+    public ProfileData(String name, String userName, String password){
+        this.name = name;
+        this.userName = userName;
+        this.password = password;
+    }
+
     public void setName(String name, String userName){
         this.name = name;
         this.userName = userName;
@@ -52,6 +58,14 @@ public class ProfileData {
 
     public String getLocation(){
         return location;
+    }
+
+    public boolean checkPassword(String password){
+        if(password.equals(this.password)){
+            return true;
+        }
+        return false;
+
     }
 
 }

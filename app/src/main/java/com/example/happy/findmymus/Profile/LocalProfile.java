@@ -3,6 +3,7 @@ package com.example.happy.findmymus.Profile;
 public class LocalProfile {
 
     private boolean loggedIn = true;
+    private ProfileData profile;
 
     public boolean isLoggedIn(){
         return loggedIn;
@@ -12,7 +13,7 @@ public class LocalProfile {
         //Returns true if sign up was successful
 
         if(checkUserName(userName)){
-
+            profile = new ProfileData(name, userName, password);
         }else {
             return false;
         }
