@@ -8,9 +8,15 @@ public class LocalProfile {
         return loggedIn;
     }
 
-    public boolean signUp(){
+    public boolean signUp(String name, String userName, String password){
         //Returns true if sign up was successful
-        return false;
+
+        if(checkUserName(userName)){
+
+        }else {
+            return false;
+        }
+        return true;
     }
 
     public boolean logIn(String name, String password){
