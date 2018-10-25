@@ -76,6 +76,9 @@ public class MainActivity extends AppCompatActivity {
         if(ProfileMain.currentProfile.isLoggedIn()) {
             Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
+        }else{
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
         }
     }
 

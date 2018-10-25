@@ -2,7 +2,7 @@ package com.example.happy.findmymus.Profile;
 
 public class LocalProfile {
 
-    private boolean loggedIn = true;
+    private boolean loggedIn = false; //defualt false until the user logs in for the first time
     private ProfileData profile;
 
     public boolean isLoggedIn(){

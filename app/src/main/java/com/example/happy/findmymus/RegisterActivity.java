@@ -58,6 +58,7 @@ public class RegisterActivity extends Activity implements LoaderCallbacks<Cursor
 
     // UI references.
     private AutoCompleteTextView mEmailView;
+    private AutoCompleteTextView mUserName;
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
@@ -68,7 +69,9 @@ public class RegisterActivity extends Activity implements LoaderCallbacks<Cursor
         setContentView(R.layout.activity_register);
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
+        mUserName = (AutoCompleteTextView) findViewById(R.id.user_name);
         populateAutoComplete();
+
 
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -149,6 +152,7 @@ public class RegisterActivity extends Activity implements LoaderCallbacks<Cursor
 
         // Store values at the time of the login attempt.
         String email = mEmailView.getText().toString();
+        String userName = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
 
         boolean cancel = false;
@@ -161,13 +165,14 @@ public class RegisterActivity extends Activity implements LoaderCallbacks<Cursor
             cancel = true;
         }
 
-        // Check for a valid email address.
+        // Check for a valid email address && valid username.
         if (TextUtils.isEmpty(email)) {
             mEmailView.setError(getString(R.string.error_field_required));
             focusView = mEmailView;
             cancel = true;
-        } else if (!isEmailValid(email)) {
-            mEmailView.setError(getString(R.string.error_invalid_email));
+        } else if (!isEmailValid(email) && !isUserNameValid(userName)) {
+
+            mEmailView.setError(getString(R.string.error_invalid_email_or_username));
             focusView = mEmailView;
             cancel = true;
         }
@@ -179,20 +184,38 @@ public class RegisterActivity extends Activity implements LoaderCallbacks<Cursor
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
+
+
+            //Registration is successful (This is not the proper way to do this but it works)
+            //replace with our code to login using profileLocal
+
+
             showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
         }
     }
 
+    private boolean isUserNameValid(String uderName){
+        return false;
+
+        //check to see if there are no duplicate usernames
+    }
+
     private boolean isEmailValid(String email) {
         // Replace this with your own logic
-        return email.contains("@");
+        if(!email.contains("@")){
+            return false;
+        }
+        return false;
+
+        //check to see if there are no email duplicates
     }
 
     private boolean isPasswordValid(String password) {
         //Replace this with your own logic
         return password.length() > 4;
+
     }
 
     /**
