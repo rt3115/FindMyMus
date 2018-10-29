@@ -1,5 +1,7 @@
 package com.example.happy.findmymus.Profile;
 
+import android.media.Image;
+
 public class LocalProfile {
 
     private boolean loggedIn = false; //defualt false until the user logs in for the first time
@@ -18,6 +20,22 @@ public class LocalProfile {
             return false;
         }
         return true;
+    }
+
+    public boolean setUpDescription(String description, Image ProfilePicture, String location)
+    {   //If setup is successful returns true
+        //TO-DO add code to add to the description, profile picture and location
+        return false;
+    }
+
+    public boolean setUpProfileInformation(String gender, int age)
+    {   //If setup is successful returns true
+        //TO-DO add code to add profile information to a newly created profile
+        if(age < 18){
+            return false;
+        }
+
+        return false;
     }
 
     public boolean logIn(String name, String password){
