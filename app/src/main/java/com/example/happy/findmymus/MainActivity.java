@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.happy.findmymus.Profile.ProfileMain;
+
 public class MainActivity extends AppCompatActivity {
     private ImageButton mapActivityButton;
     private ImageButton musicLibraryButton;
@@ -70,8 +72,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openProfileActivity() {
-        Intent intent = new Intent(this, ProfileActivity.class);
-        startActivity(intent);
+
+        if(ProfileMain.currentProfile.isLoggedIn()) {
+            Intent intent = new Intent(this, ProfileActivity.class);
+            startActivity(intent);
+        }else{
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        }
     }
 
     public void openMusicLibraryActivity() {
