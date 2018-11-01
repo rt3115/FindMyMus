@@ -15,7 +15,7 @@ public class LocalProfile {
         //Returns true if sign up was successful
 
         if(checkUserName(userName)){
-            profile = new ProfileData(name, userName, password);
+            profile = new ProfileData (name, userName, password);
         }else {
             return false;
         }
