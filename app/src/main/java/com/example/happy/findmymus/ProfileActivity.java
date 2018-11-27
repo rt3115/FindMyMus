@@ -38,6 +38,13 @@ public class ProfileActivity extends AppCompatActivity {
         });
     }
 
+    public void refresh()
+    {
+        printUsername();
+        printName();
+        printDes();
+    }
+
     public void openSettingsActivity(){
         Intent intent = new Intent(this, SettingsWindowActivity.class);
         startActivity(intent);

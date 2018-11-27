@@ -29,6 +29,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.happy.findmymus.Profile.ProfileMain;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -189,7 +191,9 @@ public class RegisterActivity extends Activity implements LoaderCallbacks<Cursor
             //Registration is successful (This is not the proper way to do this but it works)
             //replace with our code to login using profileLocal
 
-
+            ProfileMain.currentProfile.logIn("", "");
+            ProfileMain.currentProfile.signUp(email, userName, "");
+            ProfileMain.currentProfile.setUpDescription("Not Setup yet", null, "RIT");
             showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
@@ -197,7 +201,7 @@ public class RegisterActivity extends Activity implements LoaderCallbacks<Cursor
     }
 
     private boolean isUserNameValid(String uderName){
-        return false;
+        return true;
 
         //check to see if there are no duplicate usernames
     }
@@ -207,7 +211,7 @@ public class RegisterActivity extends Activity implements LoaderCallbacks<Cursor
         if(!email.contains("@")){
             return false;
         }
-        return false;
+        return true;
 
         //check to see if there are no email duplicates
     }

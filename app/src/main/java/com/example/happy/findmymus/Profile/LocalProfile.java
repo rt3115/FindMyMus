@@ -25,13 +25,14 @@ public class LocalProfile {
     public boolean setUpDescription(String description, Image ProfilePicture, String location)
     {   //If setup is successful returns true
         //TO-DO add code to add to the description, profile picture and location
+
         return false;
     }
 
     public boolean setUpProfileInformation(String gender, int age)
     {   //If setup is successful returns true
         //TO-DO add code to add profile information to a newly created profile
-        if(age < 18){
+        if(age < 18) {
             return false;
         }
 
@@ -40,7 +41,8 @@ public class LocalProfile {
 
     public boolean logIn(String name, String password){
         //Returns true if log in was successful
-        return false;
+        loggedIn = true;
+        return true;
     }
 
     private boolean checkUserName(String name){
