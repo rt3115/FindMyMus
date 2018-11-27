@@ -56,7 +56,7 @@
         app:layout_constraintVertical_bias="0.161" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/profile_pic"
         android:layout_width="287dp"
         android:layout_height="290dp"
         android:layout_marginBottom="8dp"
