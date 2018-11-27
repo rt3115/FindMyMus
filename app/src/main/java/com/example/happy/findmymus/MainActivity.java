@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private Button profileActivityButton;
     private ImageButton findLocalMusicians;
     private ImageButton findLocalBandsButton;
+    private ImageButton directMessageButton;
 
 
     @Override
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         profileActivityButton = (Button) findViewById(R.id.Profile);
          findLocalMusicians = (ImageButton) findViewById(R.id.FindLocalMusicians);
          findLocalBandsButton = (ImageButton) findViewById(R.id.FindLocalBands);
+         directMessageButton = (ImageButton) findViewById(R.id.DirectMessages);
 
          findLocalBandsButton.setOnClickListener(new View.OnClickListener() {
              @Override
@@ -35,11 +37,11 @@ public class MainActivity extends AppCompatActivity {
              }
          });
 
-         findLocalMusicians.setOnClickListener(new View.OnClickListener() {
+         directMessageButton.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
                  openFindLocalMusiciansActivity();
-                 //openDMActivity();
+                 openDMActivity();
              }
          });
 
@@ -63,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
                 openMusicLibraryActivity();
             }
         });
+
+
     }
 
 
