@@ -26,8 +26,7 @@ public class MainActivity extends AppCompatActivity {
         mapActivityButton = (ImageButton) findViewById(R.id.FindLocalConcert);
         musicLibraryButton  = (ImageButton) findViewById(R.id.MusicLibrary);
         profileActivityButton = (Button) findViewById(R.id.Profile);
-         findLocalMusicians = (ImageButton) findViewById(R.id.FindLocalMusicians);
-         findLocalBandsButton = (ImageButton) findViewById(R.id.FindLocalBands);
+         findLocalMusicians = (ImageButton) findViewById(R.id.findLocalMusicians);
          directMessageButton = (ImageButton) findViewById(R.id.DirectMessages);
 
          findLocalBandsButton.setOnClickListener(new View.OnClickListener() {
