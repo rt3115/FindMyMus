@@ -57,7 +57,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.164"
-        app:srcCompat="@drawable/find_local_musicians_icon" />
+        app:srcCompat="@drawable/match_direct_messaging" />
 
     <ImageButton
         android:id="@+id/findLocalMusicians"
